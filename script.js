@@ -32,7 +32,7 @@ document.querySelectorAll('.swatch').forEach(swatch => {
 });
 
 // Add to Cart Logic (Mockup)
-function addToCart(narrative, defaultColor, price) {
+function addToCart(event, narrative, defaultColor, price) {
     // Get selected color from the section
     const section = event.target.closest('.product-section');
     const activeSwatch = section.querySelector('.swatch.active');
