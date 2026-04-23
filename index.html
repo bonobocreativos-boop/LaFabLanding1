@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofá Lutton | La Fab - Diseño y Confort</title>
+    <meta name="description" content="Descubre el Sofá Lutton de La Fab. Un sofá diseñado para cada estilo de vida: tranquilidad, juegos, siestas y familia.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&family=Montserrat:wght@300;400;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="logo">
+            <img src="img/logowhite.png" alt="La Fab Logo">
+        </div>
+        <a href="#comprar" class="cta-header">CÓMPRALO YA POR 5'000.000</a>
+    </header>
+
+    <section class="hero">
+        <video class="video-bg" autoplay muted loop playsinline>
+            <source src="https://res.cloudinary.com/df0idzqak/video/upload/v1776902673/Sof%C3%A1LutonHeroVid_yyohiw.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Un Sofá para los amigos</h1>
+            <a href="#introduccion" class="btn-hero">CONÓCELO AQUÍ</a>
+        </div>
+        <div class="hero-pills">
+            <a href="#tranquilos" class="pill">Me gustan los lugares tranquilos</a>
+            <a href="#amigos" class="pill">Me gustan los juegos con amigos</a>
+            <a href="#siestas" class="pill">Me gusta hacer siestas</a>
+            <a href="#familia" class="pill">Me gusta hablar en familia</a>
+        </div>
+    </section>
+
+    <main>
+        <!-- Section: Introducción -->
+        <section id="introduccion" class="intro-section" style="padding: 80px 10%; text-align: center; background: white;">
+            <h2 style="color: var(--primary-color); font-size: 2.5rem; margin-bottom: 20px;">Lutton: Versatilidad en cada Fibra</h2>
+            <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem; color: #555;">La línea Lutton no es solo un sofá, es un lienzo en blanco diseñado para adaptarse a los matices de tu vida diaria. Con una estructura que desafía lo convencional y textiles seleccionados por su calidez, Lutton transforma tu sala en el escenario ideal para lo que sea que el momento demande, desde la calma más profunda hasta el encuentro más vibrante.</p>
+        </section>
+
+        <!-- Section: Lugares Tranquilos -->
+        <section id="tranquilos" class="product-section">
+            <div class="product-image">
+                <img src="img/SofaLutton1-lugares tranquilos.jpeg" alt="Sofá Lutton - Refugios de Serenidad">
+            </div>
+            <div class="product-info">
+                <h2>Refugios de Serenidad</h2>
+                <p>El Sofá Lutton es el santuario perfecto para esos momentos donde el mundo exterior se apaga. Con una ergonomía pensada para el descanso consciente, cada línea invita a la calma, transformando tu rincón favorito en un oasis de introspección y paz.</p>
+                <div class="color-options">
+                    <span>Colores Disponibles:</span>
+                    <div class="color-swatches">
+                        <div class="swatch active" style="background-color: #D2B48C;" title="Arena"></div>
+                        <div class="swatch" style="background-color: #8B8B8B;" title="Gris Humo"></div>
+                        <div class="swatch" style="background-color: #4A5D4E;" title="Verde Bosque"></div>
+                    </div>
+                </div>
+                <div class="price">5'000.000 COP</div>
+                <button class="btn-buy" onclick="addToCart('Lugares Tranquilos', 'Arena', 5000000)">COMPRAR AHORA</button>
+            </div>
+        </section>
+
+        <!-- Section: Juegos con Amigos -->
+        <section id="amigos" class="product-section">
+            <div class="product-image">
+                <img src="img/SofaLutton3-juegosconamigos.jpeg" alt="Sofá Lutton - Epicentros de Encuentro">
+            </div>
+            <div class="product-info">
+                <h2>Epicentros de Encuentro</h2>
+                <p>Diseñado para ser el protagonista de la vida social. El Lutton ofrece la amplitud necesaria para las mejores anécdotas compartidas. Su estructura robusta y materiales de alta resistencia lo convierten en el aliado perfecto para esos encuentros que se extienden hasta la madrugada.</p>
+                <div class="color-options">
+                    <span>Colores Disponibles:</span>
+                    <div class="color-swatches">
+                        <div class="swatch" style="background-color: #333;" title="Carbono"></div>
+                        <div class="swatch active" style="background-color: #704214;" title="Cuero Café"></div>
+                        <div class="swatch" style="background-color: #2F4F4F;" title="Azul Profundo"></div>
+                    </div>
+                </div>
+                <div class="price">5'000.000 COP</div>
+                <button class="btn-buy" onclick="addToCart('Juegos con Amigos', 'Cuero Café', 5000000)">COMPRAR AHORA</button>
+            </div>
+        </section>
+
+        <!-- Section: Hacer Siestas -->
+        <section id="siestas" class="product-section">
+            <div class="product-image">
+                <img src="img/SofaLutton2-hacersiestas.jpeg" alt="Sofá Lutton - El Arte de la Pausa">
+            </div>
+            <div class="product-info">
+                <h2>El Arte de la Pausa</h2>
+                <p>Para quienes dominan la maestría del descanso. Los cojines de alta densidad y la profundidad envolvente del Lutton están diseñados para abrazarte. Es una invitación constante a desconectar, recargar y disfrutar de un confort que parece no tener límites.</p>
+                <div class="color-options">
+                    <span>Colores Disponibles:</span>
+                    <div class="color-swatches">
+                        <div class="swatch active" style="background-color: #E5E5E5;" title="Blanco Nube"></div>
+                        <div class="swatch" style="background-color: #C0C0C0;" title="Plata"></div>
+                        <div class="swatch" style="background-color: #DEB887;" title="Madera"></div>
+                    </div>
+                </div>
+                <div class="price">5'000.000 COP</div>
+                <button class="btn-buy" onclick="addToCart('Hacer Siestas', 'Blanco Nube', 5000000)">COMPRAR AHORA</button>
+            </div>
+        </section>
+
+        <!-- Section: Hablar en Familia -->
+        <section id="familia" class="product-section">
+            <div class="product-image">
+                <img src="img/SofaLutton4-hablarenfamilia.jpeg" alt="Sofá Lutton - Historias que Nos Unen">
+            </div>
+            <div class="product-info">
+                <h2>Historias que Nos Unen</h2>
+                <p>El corazón latente de tu hogar. Este diseño fomenta la cercanía y el diálogo natural. Su disposición acogedora permite que cada miembro de la familia encuentre su lugar, creando el escenario perfecto donde las anécdotas diarias se convierten en recuerdos inolvidables.</p>
+                <div class="color-options">
+                    <span>Colores Disponibles:</span>
+                    <div class="color-swatches">
+                        <div class="swatch active" style="background-color: #556B2F;" title="Oliva"></div>
+                        <div class="swatch" style="background-color: #A0522D;" title="Sienna"></div>
+                        <div class="swatch" style="background-color: #BC8F8F;" title="Rosa Viejo"></div>
+                    </div>
+                </div>
+                <div class="price">5'000.000 COP</div>
+                <button class="btn-buy" onclick="addToCart('Hablar en Familia', 'Oliva', 5000000)">COMPRAR AHORA</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="img/logowhite.png" alt="La Fab Logo">
+        </div>
+        <p>&copy; 2026 La Fab. Todos los derechos reservados.</p>
+        <p>Conoce más de nuestros productos aquí: <a href="https://lafab.com.co/" style="color: white;">LaFab.</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

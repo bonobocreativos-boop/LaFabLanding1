@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | La Fab</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cart-container {
+            padding: 150px 10%;
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background: #f9f9f9;
+        }
+
+        .cart-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .cart-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .cart-details h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .cart-details .narrative-tag {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--bg-light);
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .cart-summary {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .total {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-top: 20px;
+        }
+
+        .btn-checkout {
+            width: 100%;
+            margin-top: 30px;
+            padding: 20px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-checkout:hover {
+            background: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            .cart-card {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="scrolled">
+        <div class="logo">
+            <a href="index.html"><img src="img/logowhite.png" alt="La Fab Logo"></a>
+        </div>
+        <a href="index.html" class="cta-header">VOLVER A LA TIENDA</a>
+    </header>
+
+    <div class="cart-container">
+        <div id="cart-content" class="cart-card">
+            <!-- Content will be injected by JS -->
+            <div style="grid-column: 1 / -1; text-align: center;">
+                <h2>Tu carrito está vacío</h2>
+                <a href="index.html" class="btn-buy" style="margin-top: 20px;">VER SOFÁS</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const cartItem = JSON.parse(localStorage.getItem('cartItem'));
+        const container = document.getElementById('cart-content');
+
+        if (cartItem) {
+            container.innerHTML = `
+                <div class="cart-image">
+                    <img src="${cartItem.image}" alt="${cartItem.name}">
+                </div>
+                <div class="cart-details">
+                    <span class="narrative-tag">Edición: ${cartItem.narrative}</span>
+                    <h1>${cartItem.name}</h1>
+                    <p>Color seleccionado: <strong>${cartItem.color}</strong></p>
+                    
+                    <div class="cart-summary">
+                        <div class="summary-line">
+                            <span>Subtotal</span>
+                            <span>$5'000.000</span>
+                        </div>
+                        <div class="summary-line">
+                            <span>Envío</span>
+                            <span>¡Gratis!</span>
+                        </div>
+                        <div class="total">
+                            <span>Total</span>
+                            <span>$5'000.000 COP</span>
+                        </div>
+                    </div>
+
+                    <button class="btn-checkout" onclick="alert('¡Gracias por tu compra ficticia! Redirigiendo a pasarela...')">PROCEDER AL PAGO</button>
+                    <p style="font-size: 0.7rem; color: #999; margin-top: 15px; text-align: center;">* Esta es una demostración de flujo de compra.</p>
+                </div>
+            `;
+        }
+    </script>
+
+</body>
+</html>
