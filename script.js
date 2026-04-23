@@ -57,8 +57,8 @@ function addToCart(event, narrative, defaultColor, price) {
 function buyNowHeader() {
     const product = {
         name: 'Sofá Lutton',
-        narrative: 'Refugios de Serenidad',
-        color: 'Arena',
+        narrative: 'Refugios de serenidad',
+        color: 'Gris Plata',
         price: 5000000,
         image: 'img/SofaLutton1-lugares tranquilos.jpeg'
     };

@@ -28,13 +28,13 @@ body {
 h1 {
     font-weight: 800;
     text-transform: none; /* Sentence case as per user request */
-    letter-spacing: -1px;
+    letter-spacing: -0.05em; /* -5% letter spacing */
 }
 
 h2, h3 {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    font-weight: 400;
+    text-transform: none; /* Sentence case as per user request */
+    letter-spacing: -0.05em; /* -5% letter spacing */
 }
 
 /* Header & Nav */
@@ -141,7 +141,7 @@ header.scrolled {
 /* Hero Pills */
 .hero-pills {
     position: absolute;
-    bottom: 50px;
+    bottom: 80px; /* Increased from 50px for more space */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -167,6 +167,39 @@ header.scrolled {
     background: white;
     color: var(--primary-color);
     transform: translateY(-5px);
+}
+
+.hero-footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-logo-img {
+    height: 18px; /* Scaled down logo */
+    opacity: 0.9;
+}
+
+.hero-footer a:hover {
+    color: white;
+}
+
+.hero-footer a:hover .footer-logo-img {
+    opacity: 1;
 }
 
 /* Product Sections */
@@ -288,9 +321,54 @@ footer {
 
 /* Responsive */
 @media (max-width: 992px) {
+    header {
+        padding: 15px 20px;
+    }
+    
+    header.scrolled {
+        padding: 10px 20px;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .cta-header {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+    }
+
+    .hero {
+        height: 85vh; /* Reduced by 15% to fit more video width */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        padding: 0 20px;
+    }
+
+    .hero-pills {
+        display: none; /* Removed as per user request for mobile */
+    }
+
+    .pill {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+        width: 90%; /* Stacked but clean */
+        text-align: center;
+    }
+
+    .hero-footer {
+        bottom: 10px;
+    }
+
+    .hero-footer a {
+        font-size: 0.75rem;
+    }
+
     .product-section {
         grid-template-columns: 1fr;
-        padding: 60px 5%;
+        padding: 40px 5%;
         text-align: center;
     }
     
@@ -298,8 +376,8 @@ footer {
         order: 1;
     }
     
-    .hero h1 {
-        font-size: 2.5rem;
+    .product-info h2 {
+        font-size: 2rem;
     }
     
     .color-swatches {
