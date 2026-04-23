@@ -53,6 +53,20 @@ function addToCart(event, narrative, defaultColor, price) {
     window.location.href = 'cart.html';
 }
 
+// Quick Buy from Header
+function buyNowHeader() {
+    const product = {
+        name: 'Sofá Lutton',
+        narrative: 'Refugios de Serenidad',
+        color: 'Arena',
+        price: 5000000,
+        image: 'img/SofaLutton1-lugares tranquilos.jpeg'
+    };
+
+    localStorage.setItem('cartItem', JSON.stringify(product));
+    window.location.href = 'cart.html';
+}
+
 // Reveal animations on scroll
 const observerOptions = {
     threshold: 0.1
